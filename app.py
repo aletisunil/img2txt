@@ -1,7 +1,6 @@
 import streamlit as st
 import anthropic
 import base64
-from PIL import Image
 
 st.set_page_config(page_title='img2txt', page_icon='icons/Transformed image.webp',layout="wide",menu_items=None)
 

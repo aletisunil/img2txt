@@ -6,7 +6,6 @@ st.set_page_config(page_title='imge2txt', page_icon='icons/Transformed image.web
 
 client = anthropic.Anthropic(api_key=st.secrets['claude_api_key'])
 st.header("imge2txt")
-st.markdown('#')
 
 image = st.file_uploader("Upload a image",type=['jpg','png','jpeg'],accept_multiple_files=False)
 if image is not None:

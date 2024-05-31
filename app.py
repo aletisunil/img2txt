@@ -2,10 +2,10 @@ import streamlit as st
 import anthropic
 import base64
 
-st.set_page_config(page_title='img2txt', page_icon='icons/Transformed image.webp',layout="wide",menu_items=None)
+st.set_page_config(page_title='imge2txt', page_icon='icons/Transformed image.webp',layout="wide",menu_items=None)
 
 client = anthropic.Anthropic(api_key=st.secrets['claude_api_key'])
-st.header("txt2img")
+st.header("imge2txt")
 
 image = st.file_uploader("Upload a image",type=['jpg','png','jpeg'],accept_multiple_files=False)
 if image is not None:

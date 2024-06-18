@@ -1,11 +1,15 @@
 import streamlit as st
 import anthropic
 import base64
+import os
+from dotenv import load_dotenv
 
-st.set_page_config(page_title='imge2txt', page_icon='icons/Transformed image.webp',layout="wide",menu_items=None)
+load_dotenv()
 
-client = anthropic.Anthropic(api_key=st.secrets['claude_api_key'])
-st.header("imge2txt")
+st.set_page_config(page_title='img2txt', page_icon='icons/Transformed image.webp',layout="wide",menu_items=None)
+
+client = anthropic.Anthropic(api_key=os.getenv('CLAUDE_API_KEY'))
+st.header("img2txt")
 
 image = st.file_uploader("Upload a image",type=['jpg','png','jpeg'],accept_multiple_files=False)
 if image is not None:
